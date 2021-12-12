@@ -13,9 +13,14 @@ defaults:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: ['windows-latest', 'ubuntu-latest', 'macos-latest']
+    runs-on: ${{matrix.os}}
 
     steps:
+      - uses: actions/setup-node@v2-beta
+      - uses: actions/setup-node@v1
       - uses: actions/checkout@v2
       - run: npm install
       - run: npm run build
