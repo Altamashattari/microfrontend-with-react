@@ -36,3 +36,15 @@ Install dependencies
 Create a production build using webpack
 
 Upload the result to AWS S3
+
+## CSS Scoping 
+
+- Custom CSS you are writing for your project
+    - Use a CSS-in-JS library
+    - Use Vue's built-in component style scoping
+    - User Anuglar's built-in component style scoping
+    - "Namespace" all your CSS
+
+- CSS coming from a component library or CSS library
+    - Use a component library that does css-in-js
+    - Manually buid the css library and apply namespacing techniques to it
