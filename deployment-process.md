@@ -23,3 +23,16 @@ auth                Did Container Change?           Build a production version o
 
 
 Amazon S3  <-- Amazon CloudFront(CDN) <-- Website
+
+
+# Workflow for deploying container
+
+Whenever code is pushed to the master/main branch and this commit contains a change to the container folder
+
+Change into container folder
+
+Install dependencies
+
+Create a production build using webpack
+
+Upload the result to AWS S3
